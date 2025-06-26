@@ -1,0 +1,33 @@
+Neos.Workspace.Ui.WorkspaceController.reviewDocument = Neos.Fusion:Component {
+  /// string
+  selectedWorkspaceName = ${selectedWorkspaceName}
+  /// string
+  selectedWorkspaceLabel = ${selectedWorkspaceLabel}
+  /// \Neos\ContentRepository\Core\SharedModel\Workspace\WorkspaceName
+  baseWorkspaceName = ${baseWorkspaceName}
+  /// string
+  baseWorkspaceLabel = ${baseWorkspaceLabel}
+  /// bool
+  canPublishToBaseWorkspace = ${canPublishToBaseWorkspace}
+  /// bool
+  canPublishToWorkspace = ${canPublishToWorkspace}
+  /// array
+  siteChanges = ${siteChanges}
+  /// array
+  changes = ${changes}
+  /// array
+  contentDimensions = ${contentDimensions}
+  /// array
+  flashMessages = ${flashMessages}
+
+  i18n = ${I18n.id('').source('Main').package('Neos.Workspace.Ui')}
+
+  renderer = afx`
+    <Neos.Workspace.Ui:Component.ModuleWrapper
+      flashMessages={props.flashMessages}
+    >
+      test
+      {Json.stringify(props.changes)}
+    </Neos.Workspace.Ui:Component.ModuleWrapper>
+  `
+}

@@ -17,8 +17,14 @@ Neos:
               styleSheets:
                 'Module': 'resource://Neos.Workspace.Ui/Public/Styles/Module.css'
 
+    fusion:
+      autoInclude:
+        Neos.Workspace.Ui: true
     userInterface:
       translation:
         autoInclude:
           Neos.Workspace.Ui:
             - Main
+  Fusion:
+    defaultContext:
+      Workspaces: Neos\Workspace\Ui\Eel\Helper\WorkspaceHelper
