@@ -16,10 +16,6 @@ Neos:
                 'Review': 'resource://Neos.Workspace.Ui/Public/Scripts/Review.js'
               styleSheets:
                 'Module': 'resource://Neos.Workspace.Ui/Public/Styles/Module.css'
-
-    fusion:
-      autoInclude:
-        Neos.Workspace.Ui: true
     userInterface:
       translation:
         autoInclude:
